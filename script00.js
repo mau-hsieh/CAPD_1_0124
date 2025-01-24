@@ -58,7 +58,7 @@ setInterval(() => {
             .then(data => {
                 const users = data.users;
                 const user = users.find(u => u.username === username && u.password === password);
-
+                localStorage.setItem("username", username); // 儲存登入狀態
                 if (user) {
                     // 登入成功
                     document.getElementById("errorMessage").textContent = `成功登入`;
