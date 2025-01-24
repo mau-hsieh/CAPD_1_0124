@@ -48,7 +48,6 @@ setInterval(() => {
 
     // 檢查是否觸發登入驗證
     if (login == 1) {
-        window.location.href = 'index.html'; // 跳轉到 index.html
         fetch(jsonFile)
             .then(response => {
                 if (!response.ok) {
